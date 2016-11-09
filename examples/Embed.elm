@@ -40,7 +40,7 @@ fetch url =
   Task.perform FetchFailed FetchSucceed (Soundcloud.fetchEmbedSrc url)
 
 main = App.program
-    { init = (model, fetch model.oembedSrc)
+    { init = (model, fetch model.url)
     , view = view
     , update = update
     , subscriptions = always Sub.none
